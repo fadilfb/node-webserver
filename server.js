@@ -52,11 +52,19 @@ app.get('/about', (req, res) => {
    });
 });
 
+app.get('/projects', (req, res) => {
+   res.render('projects.hbs', {
+      pageTitle: 'My Project List'
+   });
+});
+
 app.get('/bad', (req, res) => {
    res.send({
       errorMessage: 'Unable to handel request'
    });
 });
+
+
 
 app.listen(port, function() {
    console.log(`App listening on port ${port}!`);
